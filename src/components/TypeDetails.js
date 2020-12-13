@@ -1,14 +1,23 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
+import Type from "./Type";
 
-const TypeDetails = () => {
+const TypeDetails = ({ type }) => {
   return (
-    <View>
-      <Text>TypeDetails</Text>
+    <View style={styles.container}>
+      <Type displayType={type[0].type.name} />
+      {type.length == 2 ? <Type displayType={type[1].type.name} /> : null}
     </View>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    marginTop: 5,
+    width: 130,
+  },
+});
 
 export default TypeDetails;

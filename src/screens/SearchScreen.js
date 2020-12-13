@@ -21,6 +21,8 @@ const SearchScreen = () => {
         name={result.species.name}
         id={result.id}
         sprite={result.sprites.front_default}
+        typing={result.types}
+        stats={result.stats}
       />
     </>
   );
