@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, View, StyleSheet, Image } from "react-native";
 import TypeDetails from "./TypeDetails";
+import StatDetails from "./StatDetails";
 
 const ResultDetails = ({ name, id, sprite, typing, stats }) => {
   return (
@@ -10,7 +11,7 @@ const ResultDetails = ({ name, id, sprite, typing, stats }) => {
       <Text style={styles.idStyle}>#{id}</Text>
       <Text style={styles.nameStyle}>{name.toUpperCase()}</Text>
       <TypeDetails type={typing} />
-      {/* <StatDetails stats={stats} /> */}
+      <StatDetails stats={stats} />
     </View>
   );
 };

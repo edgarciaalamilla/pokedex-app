@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     justifyContent: "space-around",
-    marginTop: 5,
+    marginVertical: 5,
     width: 130,
   },
 });
