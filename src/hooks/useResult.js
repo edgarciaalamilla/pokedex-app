@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import pokemon from "../api/pokemon";
 
 export default () => {
@@ -9,12 +9,16 @@ export default () => {
     try {
       const response = await pokemon.get(`pokemon/${queryTerm.toLowerCase()}`);
 
-      setResult(response);
+      setResult(response.data);
       setErrorMessage("");
     } catch (e) {
       setErrorMessage("Something went wrong");
     }
   };
+
+  useEffect(() => {
+    searchAPI("pikachu");
+  }, []);
 
   return [searchAPI, result, errorMessage];
 };

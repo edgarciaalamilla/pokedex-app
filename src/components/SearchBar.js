@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
   },
   inputStyle: {
     fontSize: 24,
+    flex: 1,
   },
 });
 
